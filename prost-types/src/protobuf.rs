@@ -1725,6 +1725,7 @@ pub struct Value {
 pub mod value {
     /// The kind of value.
     #[derive(Clone, PartialEq, ::prost::Oneof)]
+    #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
     pub enum Kind {
         /// Represents a null value.
         #[prost(enumeration = "super::NullValue", tag = "1")]
